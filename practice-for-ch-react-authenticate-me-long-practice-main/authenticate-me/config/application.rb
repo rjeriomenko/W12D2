@@ -24,7 +24,7 @@ module AuthenticateMe
     config.load_defaults 7.0
 
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session:CookieStore,
+    config.middleware.use ActionDispatch::Session::CookieStore,
     key: '_appname_session',
     same_site: :lax,
     secure: Rails.env.production?
